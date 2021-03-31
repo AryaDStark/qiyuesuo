@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ntu.yangyu.dao.FileDao">
+    <insert id="saveFile">
+        insert into file (size,type,originalName,createTime,path,UUID) values (#{size},#{type},#{originalName},#{createTime},#{path},#{UUID});
+    </insert>
+
+    <select id="getData" resultType="com.ntu.yangyu.vo.FileQuery">
+        select * from file where UUID=#{UUID};
+    </select>
+    <select id="findFilePath" resultType="com.ntu.yangyu.vo.TimeAndType">
+        select createTime,path from file where UUID=#{UUID};
+    </select>
+</mapper>

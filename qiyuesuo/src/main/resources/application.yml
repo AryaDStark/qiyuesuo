@@ -1,0 +1,17 @@
+
+#ÎÄ¼þ´æ´¢Â·¾¶
+path:
+  filePath: E:\\test
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yangyu?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 1234
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
